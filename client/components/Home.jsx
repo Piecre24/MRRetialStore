@@ -1,15 +1,21 @@
 import React from 'react'
 
+// import whiteTee from '../../server/public/image/classic-tee.png'
+
 class Home extends React.Component {
   render () {
     return (
       <>
         <div className= 'title-boilerplate'>
-          <h1>ReactsBoilerPlate</h1>
-          <p> This can be used fors future projects and its open source</p>
-          <div className= 'buttons'>
-            <a href="https://github.com/Piecre24/Boilerplate-2.0" className="button-github"> Github</a>
-            <a href="" className="button-code">Code</a>
+          <h3>Classic Tee</h3>
+          <p> This is where the description would be written </p>
+          <div className = 'image-placing'>
+            {/* <div className = 'whiteT-img'><img src={whiteTee} alt="img" /></div> */}
+          </div>
+          <div className= 'buttons-size'>
+            <a href ='#'>S</a>
+            <a href ='#'>M</a>
+            <a href ='#'>L</a>
           </div>
         </div>
       </>
