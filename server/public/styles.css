@@ -1,26 +1,36 @@
 .header-class {
     background-color:#F6F6F7 ;
 }
+
+.product-content {
+    padding-left: 20%;
+    padding-right: 20%;
+    display: inline-flex;
+}
 .product-content a {
     text-decoration: none;
     
 }
+
 .image-placing {
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
     width: fit-content;
+    margin-left: 20px;
 }
+
 /* size buttons */
-.button-size  {
+.buttons-size a {
+  display: block;
   text-decoration: none;
   margin: auto ;
+  padding: 14px 28px;
+  font-size: 16px;
+  display: inline-block;
 }
-
-
 
 /*cart buttons */
 .add-to-cart {
-    border: 2px solid black;
-    padding: 14px 25px;
+    border: 4px solid black;
+    padding: 8px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
