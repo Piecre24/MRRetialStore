@@ -1,0 +1,38 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-boilerplate20-dev-193214-authRole",
+      "UnauthRoleArn": "arn:aws:iam::788430180833:role/amplify-boilerplate20-dev-193214-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::788430180833:role/amplify-boilerplate20-dev-193214-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-boilerplate20-dev-193214-deployment",
+      "UnauthRoleName": "amplify-boilerplate20-dev-193214-unauthRole",
+      "StackName": "amplify-boilerplate20-dev-193214",
+      "StackId": "arn:aws:cloudformation:us-east-1:788430180833:stack/amplify-boilerplate20-dev-193214/8d03d370-983c-11eb-921b-0a1f71f25d05",
+      "AmplifyAppId": "d2cnf5vuwuw3hq"
+    }
+  },
+  "function": {
+    "boilerplate202427c352": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "api": {
+    "myapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "boilerplate202427c352",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  }
+}
