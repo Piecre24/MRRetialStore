@@ -14,9 +14,19 @@
     
 }
 
+.product-description p {
+    padding: 10px 0px;
+}
+
+
 .image-placing {
     width: fit-content;
     margin-left: 20px;
+    margin-right: 20px;
+}
+
+.whiteT-img {
+    
 }
 
 /* size buttons */

@@ -20,6 +20,7 @@ class Home extends React.Component {
               id officuim applamus. </p>
 
             <div className= 'buttons-size'>
+              <h3>size</h3>
               <a href ='#'>S</a>
               <a href ='#'>M</a>
               <a href ='#'>L</a>
