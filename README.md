@@ -11,12 +11,14 @@ To be able to deliver a profesional prototype of a web application
 - Heroku Cloud deployment []
 - Construct prototype webpage visible []
 - Have the right colour scheme []
+- Responsive App []
 - Redux functionality []
 - Size button []
 - Add Cart button []
 - My Cart list []
 - Add Cart functionality (stretch) []
 - Thunk functionality (stretch) []
+- AWS Cloud deployment (stretch) []
 
 ## Expectation settings
 Starting work at 10pm to 3am in total of 5 hours max.
