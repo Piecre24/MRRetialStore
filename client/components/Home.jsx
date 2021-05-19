@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import ButtonSize from './ButtonSize'
+import AddCartButton from './AddCartButton'
 
 import whitetee from '../../server/public/image/classic-tee.png'
 
@@ -22,9 +23,7 @@ class Home extends React.Component {
               sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est,
               id officuim applamus. </p>
             <ButtonSize />
-            <div className= 'add-to-cart'>
-              <a href ='#'>ADD TO CART</a>
-            </div>
+            <AddCartButton />
           </div>
         </div>
       </>

@@ -4,14 +4,6 @@ import { connect } from 'react-redux'
 import { selectSize } from '../action/index'
 
 const ButtonSize = (props) => {
-//   mediumS = () => {
-//     this.props.dispatch(selectSize('meduim'))
-//   }
-
-  //   largeS = () => {
-  //     this.props.dispatch(selectSize('large'))
-  //   }
-
   return (
     <>
       <div className = 'size-title' >

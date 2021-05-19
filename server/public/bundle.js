@@ -90,7 +90,7 @@
 /*!********************************!*\
   !*** ./client/action/index.js ***!
   \********************************/
-/*! exports provided: SELECT_SIZE, navigate, selectSize */
+/*! exports provided: SELECT_SIZE, navigate, selectSize, addToCart */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,6 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_SIZE", function() { return SELECT_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return navigate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectSize", function() { return selectSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToCart", function() { return addToCart; });
 var SELECT_SIZE = 'SELECT_SIZE';
 var navigate = function navigate(target) {
   return {
@@ -113,6 +114,58 @@ var selectSize = function selectSize(size) {
 
   };
 };
+var addToCart = function addToCart(product) {
+  return {
+    type: 'ADD_TO_CART',
+    product: product
+  };
+};
+
+/***/ }),
+
+/***/ "./client/components/AddCartButton.jsx":
+/*!*********************************************!*\
+  !*** ./client/components/AddCartButton.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _action_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../action/index */ "./client/action/index.js");
+
+
+
+
+var AddCartButton = function AddCartButton(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "add-to-cart"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    onClick: function onClick() {
+      return props.dispatchSize(props.size);
+    }
+  }, "ADD TO CART")));
+};
+
+var dispatchToAddCart = function dispatchToAddCart(dispatch) {
+  return {
+    dispatchAdd: function dispatchAdd(size) {
+      return dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_2__["selectSize"])(size));
+    }
+  };
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    size: state.selectSize
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, dispatchToAddCart)(AddCartButton));
 
 /***/ }),
 
@@ -161,12 +214,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ButtonSize = function ButtonSize(props) {
-  //   mediumS = () => {
-  //     this.props.dispatch(selectSize('meduim'))
-  //   }
-  //   largeS = () => {
-  //     this.props.dispatch(selectSize('large'))
-  //   }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "size-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "SIZE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
@@ -315,7 +362,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _ButtonSize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ButtonSize */ "./client/components/ButtonSize.jsx");
-/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
+/* harmony import */ var _AddCartButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AddCartButton */ "./client/components/AddCartButton.jsx");
+/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -343,6 +391,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Home = /*#__PURE__*/function (_React$Component) {
   _inherits(Home, _React$Component);
 
@@ -364,7 +413,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "whiteT-img"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_4__["default"],
         width: "460",
         height: "345",
         alt: "img"
@@ -372,11 +421,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "product-description"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Classic Tee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-tag"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "$75.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est, id officuim applamus. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ButtonSize__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "add-to-cart"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "ADD TO CART")))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "$75.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est, id officuim applamus. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ButtonSize__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddCartButton__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
     }
   }]);
 

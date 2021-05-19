@@ -13,3 +13,10 @@ export const selectSize = size => {
     size // small, medium or large
   }
 }
+
+export const addToCart = product => {
+  return {
+    type: 'ADD_TO_CART',
+    product
+  }
+}
