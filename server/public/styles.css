@@ -15,8 +15,8 @@
 
 .product-content {
     padding-top: 40px;
-    padding-left: 20%;
-    padding-right: 20%;
+     padding-left: 2%;
+    padding-right: 2%; 
     display: inline-flex;
 }
 .product-content a {
@@ -97,3 +97,26 @@ h4.required-star {
     border-color: #222222;
   }
   
+/* for mobiles */
+
+@media only screen and (max-width: 600px){
+    .app {
+        font-size:80%;
+    }
+    .whiteT-img img {width: 100%; margin:auto}
+    .product-content {
+        padding-top: 40px;
+        padding-right: 10%;
+        padding-left: 2%;
+        display: block;
+    }
+    .add-to-cart a{
+    border: 2px solid black;
+    font-size: 70%;
+    width: 30%;
+    }
+    .buttons-size a {
+        font-size: 10px;
+        display: inline-block;
+      }
+}

@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import ButtonSize from './ButtonSize'
 
 import whitetee from '../../server/public/image/classic-tee.png'
-import { selectSize } from '../action/index'
 
 class Home extends React.Component {
   render () {
