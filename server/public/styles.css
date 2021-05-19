@@ -1,16 +1,14 @@
 
-
 .header-class {
     background-color:#F6F6F7 ;
-    padding: 20px;
+    padding: 5px;
 }
 
 .header-class a {
     color: #CCCCCC;
     text-decoration: none;
-    float: right;
+    padding-left: 92%;
     text-align: center;
-    padding-right: 5%;
 }
 
 .product-content {
