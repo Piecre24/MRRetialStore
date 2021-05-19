@@ -56,11 +56,14 @@
     ]
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^1.0.6",
     "authenticare": "^0.4.7",
+    "aws-amplify": "^3.3.26",
     "cors": "^2.8.5",
     "d": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
     "playwright-cli": "^0.162.1",
