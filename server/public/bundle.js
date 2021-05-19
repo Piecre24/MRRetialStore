@@ -342,6 +342,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "whiteT-img"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+        width: "460",
+        height: "345",
         alt: "img"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-description"

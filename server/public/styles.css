@@ -28,14 +28,11 @@
     color: #CCCCCC;
 }
 
-.image-placing {
-    width: fit-content;
+.whiteT-img img{
+    width: 480px;
+    height: auto;
     margin-left: 20px;
-    margin-right: 20px;
-}
-
-.whiteT-img {
-    
+    margin-right: 150px;
 }
 /* size title*/
 .size-title h4{

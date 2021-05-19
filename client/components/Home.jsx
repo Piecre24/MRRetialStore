@@ -12,7 +12,7 @@ class Home extends React.Component {
       <>
         <div className= 'product-content'>
           <div className = 'image-placing'>
-            <div className = 'whiteT-img'><img src={whitetee} alt="img" /></div>
+            <div className = 'whiteT-img'><img src={whitetee} width="460" height= "345" alt="img" /></div>
           </div>
 
           <div className= 'product-description'>
