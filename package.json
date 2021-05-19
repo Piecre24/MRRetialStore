@@ -64,10 +64,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
+    "file-loader": "^6.2.0",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
     "playwright-cli": "^0.162.1",
-    "superagent": "^5.3.1"
+    "superagent": "^5.3.1",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

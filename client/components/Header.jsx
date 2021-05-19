@@ -5,7 +5,7 @@ class header extends React.Component {
     return (
       <>
         <div className = 'header-class'>
-          <h1>This is header</h1>
+          <a href ='#' className = 'mycart'>My Cart</a>
         </div>
 
       </>
