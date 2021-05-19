@@ -5,7 +5,7 @@ class Home extends React.Component {
     return (
       <>
         <div className= 'title-boilerplate'>
-          <h1>ReactsBoilerPlate</h1>
+          <h1>Reactssdasdas BoilerPlate</h1>
           <p> This can be used fors future projects and its open source</p>
           <div className= 'buttons'>
             <a href="https://github.com/Piecre24/Boilerplate-2.0" className="button-github"> Github</a>
