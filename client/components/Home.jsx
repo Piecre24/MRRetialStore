@@ -17,7 +17,7 @@ class Home extends React.Component {
 
           <div className= 'product-description'>
             <h2>Classic Tee</h2>
-            <div className='price-tag'><h4>$75.00</h4></div>
+            <div className='price-tag'><hr/><h4>$75.00</h4><hr/></div>
             <p> Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt.
               Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor
               sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est,
