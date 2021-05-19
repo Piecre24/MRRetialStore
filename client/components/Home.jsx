@@ -7,9 +7,12 @@ class Home extends React.Component {
     return (
       <>
         <div className= 'product-content'>
-          <h3>Classic Tee</h3>
-          <div className='price-tag'><p>$75.00</p></div>
-          <p> This is where the description would be written </p>
+          <div className= 'product-description'>
+            <h3>Classic Tee</h3>
+            <div className='price-tag'><p>$75.00</p></div>
+            <p> This is where the description would be written </p>
+          </div>
+
           <div className = 'image-placing'>
             <div className = 'whiteT-img'><img src={whitetee} alt="img" /></div>
           </div>
@@ -18,6 +21,10 @@ class Home extends React.Component {
             <a href ='#'>S</a>
             <a href ='#'>M</a>
             <a href ='#'>L</a>
+          </div>
+
+          <div className= 'add-to-cart'>
+            <a href ='#'>ADD TO CART</a>
           </div>
         </div>
       </>

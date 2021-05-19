@@ -1,3 +1,37 @@
 .header-class {
     background-color:#F6F6F7 ;
 }
+.product-content a {
+    text-decoration: none;
+    
+}
+.image-placing {
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    width: fit-content;
+}
+/* size buttons */
+.button-size  {
+  text-decoration: none;
+  margin: auto ;
+}
+
+
+
+/*cart buttons */
+.add-to-cart {
+    border: 2px solid black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.add-to-cart a {
+    color:#222222
+}
+
+.add-to-cart a:hover{
+    color: CCCCCC;
+    background-color: #222222;
+  }
+  
