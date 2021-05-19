@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 
-import navigation from './navigation'
+import activePage from './activePage'
 import selectSize from './selectsize'
 
 export default combineReducers({
-  navigation,
+  activePage,
   selectSize
 
 })

@@ -41,7 +41,6 @@
 /* size buttons */
 
 .buttons-size a {
-  border: 2px solid #CCCCCC;
   display: block;
   text-decoration: none;
   margin: 3px ;
@@ -49,6 +48,10 @@
   padding: 12px 18px;
   font-size: 16px;
   display: inline-block;
+}
+
+.small-size {
+    border: 2px solid #CCCCCC;
 }
 
 /*cart buttons */

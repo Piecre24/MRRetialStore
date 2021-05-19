@@ -107,7 +107,8 @@ var navigate = function navigate(target) {
 var selectSize = function selectSize(size) {
   return {
     type: 'SELECT_SIZE',
-    size: size
+    size: size // small, medium or large
+
   };
 };
 
@@ -265,15 +266,15 @@ var Home = /*#__PURE__*/function (_React$Component) {
     _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "smallS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('small'));
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('small'));
     });
 
     _defineProperty(_assertThisInitialized(_this), "mediumS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('meduim'));
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('meduim'));
     });
 
     _defineProperty(_assertThisInitialized(_this), "largeS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('largeS'));
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('largeS'));
     });
 
     return _this;
@@ -301,7 +302,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "buttons-size"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
-        className: "small-size",
+        className: this.props.selectSize === 'small' ? 'small-size-on' : 'small-size',
         onClick: this.smallS
       }, "S"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
@@ -372,31 +373,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./client/reducers/index.js":
-/*!**********************************!*\
-  !*** ./client/reducers/index.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ "./client/reducers/navigation.js");
-/* harmony import */ var _selectsize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectsize */ "./client/reducers/selectsize.js");
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  navigation: _navigation__WEBPACK_IMPORTED_MODULE_1__["default"],
-  selectSize: _selectsize__WEBPACK_IMPORTED_MODULE_2__["default"]
-}));
-
-/***/ }),
-
-/***/ "./client/reducers/navigation.js":
+/***/ "./client/reducers/activePage.js":
 /*!***************************************!*\
-  !*** ./client/reducers/navigation.js ***!
+  !*** ./client/reducers/activePage.js ***!
   \***************************************/
 /*! exports provided: NAVIGATE, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -424,6 +403,28 @@ var activePage = function activePage() {
 
 /***/ }),
 
+/***/ "./client/reducers/index.js":
+/*!**********************************!*\
+  !*** ./client/reducers/index.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _activePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./activePage */ "./client/reducers/activePage.js");
+/* harmony import */ var _selectsize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectsize */ "./client/reducers/selectsize.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  activePage: _activePage__WEBPACK_IMPORTED_MODULE_1__["default"],
+  selectSize: _selectsize__WEBPACK_IMPORTED_MODULE_2__["default"]
+}));
+
+/***/ }),
+
 /***/ "./client/reducers/selectsize.js":
 /*!***************************************!*\
   !*** ./client/reducers/selectsize.js ***!
@@ -434,7 +435,7 @@ var activePage = function activePage() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_SIZE", function() { return SELECT_SIZE; });
-var SELECT_SIZE = 'SELECT SIZE'; // selecting the size of the t-shirt
+var SELECT_SIZE = 'SELECT_SIZE'; // selecting the size of the t-shirt
 
 var selectedSize = function selectedSize() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'none';

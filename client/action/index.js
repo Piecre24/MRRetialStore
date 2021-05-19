@@ -8,6 +8,6 @@ export const navigate = target => {
 export const selectSize = size => {
   return {
     type: 'SELECT_SIZE',
-    size
+    size // small, medium or large
   }
 }

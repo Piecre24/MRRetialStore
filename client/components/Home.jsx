@@ -2,19 +2,19 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import whitetee from '../../server/public/image/classic-tee.png'
-import { navigate } from '../action/index'
+import { navigate, selectSize } from '../action/index'
 
 class Home extends React.Component {
   smallS = () => {
-    this.props.dispatch(navigate('small'))
+    this.props.dispatch(selectSize('small'))
   }
 
   mediumS = () => {
-    this.props.dispatch(navigate('meduim'))
+    this.props.dispatch(selectSize('meduim'))
   }
 
   largeS = () => {
-    this.props.dispatch(navigate('largeS'))
+    this.props.dispatch(selectSize('largeS'))
   }
 
   render () {
@@ -32,9 +32,10 @@ class Home extends React.Component {
               Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor
               sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est,
               id officuim applamus. </p>
+
             <div className = 'size-title' ><h4>size*</h4></div>
             <div className= 'buttons-size'>
-              <a href ='#' className='small-size' onClick={this.smallS}>S</a>
+              <a href ='#' className={this.props.selectSize === 'small' ? 'small-size-on' : 'small-size'} onClick={this.smallS}>S</a>
               <a href ='#' className='meduim-size' onClick={this.mediumS}>M</a>
               <a href ='#' className='large-size' onClick={this.largeS}>L</a>
             </div>
@@ -43,7 +44,6 @@ class Home extends React.Component {
               <a href ='#'>ADD TO CART</a>
             </div>
           </div>
-
         </div>
       </>
     )
