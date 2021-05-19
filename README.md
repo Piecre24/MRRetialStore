@@ -6,8 +6,8 @@ A prototype of a simple product details section of the clothing retail site.
 To be able to deliver a profesional prototype of a web application 
 
 # Things to do
-- Install write package []
-- Make a dev branch []
+- Install write package [x]
+- Make a dev branch [x]
 - Heroku Cloud deployment []
 - Construct prototype webpage visible []
 - Have the right colour scheme []
