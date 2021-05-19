@@ -143,6 +143,73 @@ var App = function App(props) {
 
 /***/ }),
 
+/***/ "./client/components/ButtonSize.jsx":
+/*!******************************************!*\
+  !*** ./client/components/ButtonSize.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _action_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../action/index */ "./client/action/index.js");
+
+
+
+
+var ButtonSize = function ButtonSize(props) {
+  //   mediumS = () => {
+  //     this.props.dispatch(selectSize('meduim'))
+  //   }
+  //   largeS = () => {
+  //     this.props.dispatch(selectSize('large'))
+  //   }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "size-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "size*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "buttons-size"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: props.size === 'small' ? 'small-size-on' : 'small-size',
+    onClick: function onClick() {
+      return props.dispatchSize('small');
+    }
+  }, "S"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: props.size === 'medium' ? 'medium-size-on' : 'medium-size',
+    onClick: function onClick() {
+      return props.dispatchSize('medium');
+    }
+  }, "M"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: props.size === 'large' ? 'large-size-on' : 'large-size',
+    onClick: function onClick() {
+      return props.dispatchSize('large');
+    }
+  }, "L")));
+};
+
+var dispatchToProps = function dispatchToProps(dispatch) {
+  return {
+    dispatchSize: function dispatchSize(size) {
+      return dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_2__["selectSize"])(size));
+    }
+  };
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    size: state.selectSize
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, dispatchToProps)(ButtonSize));
+
+/***/ }),
+
 /***/ "./client/components/Header.jsx":
 /*!**************************************!*\
   !*** ./client/components/Header.jsx ***!
@@ -220,8 +287,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
-/* harmony import */ var _action_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../action/index */ "./client/action/index.js");
+/* harmony import */ var _ButtonSize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ButtonSize */ "./client/components/ButtonSize.jsx");
+/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
+/* harmony import */ var _action_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../action/index */ "./client/action/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -244,7 +312,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -257,29 +324,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Home);
 
   function Home() {
-    var _this;
-
     _classCallCheck(this, Home);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "smallS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('small'));
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "mediumS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('meduim'));
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "largeS", function () {
-      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["selectSize"])('largeS'));
-    });
-
-    return _this;
+    return _super.apply(this, arguments);
   }
 
   _createClass(Home, [{
@@ -292,29 +339,13 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "whiteT-img"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_3__["default"],
         alt: "img"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-description"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Classic Tee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-tag"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "$75.00")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est, id officuim applamus. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "size-title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "size*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "buttons-size"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: this.props.selectSize === 'small' ? 'small-size-on' : 'small-size',
-        onClick: this.smallS
-      }, "S"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "meduim-size",
-        onClick: this.mediumS
-      }, "M"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "large-size",
-        onClick: this.largeS
-      }, "L")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "$75.00")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est, id officuim applamus. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ButtonSize__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-to-cart"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
@@ -327,7 +358,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    size: state.size
+    size: state.selectSize
   };
 };
 
@@ -443,7 +474,6 @@ var offbutton = 'none'; // selecting the size of the t-shirt
 var selectSize = function selectSize() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : offbutton;
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  console.log(action);
 
   switch (action.type) {
     case SELECT_SIZE:
