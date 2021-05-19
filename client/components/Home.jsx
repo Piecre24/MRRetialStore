@@ -12,15 +12,14 @@ class Home extends React.Component {
           </div>
 
           <div className= 'product-description'>
-            <h3>Classic Tee</h3>
-            <div className='price-tag'><p>$75.00</p></div>
+            <h2>Classic Tee</h2>
+            <div className='price-tag'><h4>$75.00</h4></div>
             <p> Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt.
               Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor
               sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est,
               id officuim applamus. </p>
-
+            <div className = 'size-title' ><h4>size*</h4></div>
             <div className= 'buttons-size'>
-              <h3>size</h3>
               <a href ='#'>S</a>
               <a href ='#'>M</a>
               <a href ='#'>L</a>
