@@ -1,8 +1,10 @@
 .header-class {
     background-color:#F6F6F7 ;
+    padding: 10px;
 }
 
 .product-content {
+    padding-top:  40px;
     padding-left: 20%;
     padding-right: 20%;
     display: inline-flex;

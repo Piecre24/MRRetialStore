@@ -14,7 +14,11 @@ class Home extends React.Component {
           <div className= 'product-description'>
             <h3>Classic Tee</h3>
             <div className='price-tag'><p>$75.00</p></div>
-            <p> This is where the description would be written </p>
+            <p> Dolor sit amet, consectetur adips elit. Haec et tu ita posuisti, et verba vestra sunt.
+              Quod autem retione actum est, id officum applamus dolor sit amet, id officium appellamus dolor
+              sit amet, consectetur adipiscing elit. Hae et tu ita possuisti, et verba vestra sunt. Quod autem ration actum est,
+              id officuim applamus. </p>
+
             <div className= 'buttons-size'>
               <a href ='#'>S</a>
               <a href ='#'>M</a>
