@@ -49,10 +49,33 @@
   font-size: 16px;
   display: inline-block;
 }
-
+/* non click buttons */
 .small-size {
     border: 2px solid #CCCCCC;
 }
+
+.medium-size {
+    border: 2px solid #CCCCCC;
+}
+
+.large-size {
+    border: 2px solid #CCCCCC;
+}
+
+/* clicked buttons */
+.small-size-on {
+    border: 3px solid black;
+}
+
+.medium-size-on {
+    border: 3px solid black;
+}
+
+.large-size-on {
+    border: 3px solid black;
+}
+
+
 
 /*cart buttons */
 .add-to-cart {
