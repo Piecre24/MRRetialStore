@@ -1,3 +1,5 @@
+export const SELECT_SIZE = 'SELECT_SIZE'
+
 export const navigate = target => {
   return {
     type: 'NAVIGATE',

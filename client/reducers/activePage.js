@@ -2,7 +2,7 @@ export const NAVIGATE = 'NAVIGATE'
 
 const initialPage = 'home'
 
-const activePage = (state = 'home', action) => {
+const activePage = (state = initialPage, action) => {
   switch (action.type) {
     case NAVIGATE:
       return action.target

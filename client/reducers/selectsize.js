@@ -1,13 +1,15 @@
 export const SELECT_SIZE = 'SELECT_SIZE'
 
+const offbutton = 'none'
 // selecting the size of the t-shirt
-const selectedSize = (state = 'none', action) => {
+const selectSize = (state = offbutton, action) => {
+  console.log(action)
   switch (action.type) {
     case SELECT_SIZE:
-      return action.target
+      return action.size
     default:
       return state
   }
 }
 
-export default selectedSize
+export default selectSize

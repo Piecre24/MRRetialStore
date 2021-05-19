@@ -90,13 +90,15 @@
 /*!********************************!*\
   !*** ./client/action/index.js ***!
   \********************************/
-/*! exports provided: navigate, selectSize */
+/*! exports provided: SELECT_SIZE, navigate, selectSize */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_SIZE", function() { return SELECT_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return navigate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectSize", function() { return selectSize; });
+var SELECT_SIZE = 'SELECT_SIZE';
 var navigate = function navigate(target) {
   return {
     type: 'NAVIGATE',
@@ -387,7 +389,7 @@ var NAVIGATE = 'NAVIGATE';
 var initialPage = 'home';
 
 var activePage = function activePage() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'home';
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialPage;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
@@ -414,20 +416,20 @@ var activePage = function activePage() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _activePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./activePage */ "./client/reducers/activePage.js");
-/* harmony import */ var _selectsize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectsize */ "./client/reducers/selectsize.js");
+/* harmony import */ var _selectSize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectSize */ "./client/reducers/selectSize.js");
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   activePage: _activePage__WEBPACK_IMPORTED_MODULE_1__["default"],
-  selectSize: _selectsize__WEBPACK_IMPORTED_MODULE_2__["default"]
+  selectSize: _selectSize__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
 
-/***/ "./client/reducers/selectsize.js":
+/***/ "./client/reducers/selectSize.js":
 /*!***************************************!*\
-  !*** ./client/reducers/selectsize.js ***!
+  !*** ./client/reducers/selectSize.js ***!
   \***************************************/
 /*! exports provided: SELECT_SIZE, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -435,22 +437,24 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_SIZE", function() { return SELECT_SIZE; });
-var SELECT_SIZE = 'SELECT_SIZE'; // selecting the size of the t-shirt
+var SELECT_SIZE = 'SELECT_SIZE';
+var offbutton = 'none'; // selecting the size of the t-shirt
 
-var selectedSize = function selectedSize() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'none';
+var selectSize = function selectSize() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : offbutton;
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  console.log(action);
 
   switch (action.type) {
     case SELECT_SIZE:
-      return action.target;
+      return action.size;
 
     default:
       return state;
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (selectedSize);
+/* harmony default export */ __webpack_exports__["default"] = (selectSize);
 
 /***/ }),
 
