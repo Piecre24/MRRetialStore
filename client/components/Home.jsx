@@ -1,8 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import whitetee from '../../server/public/image/classic-tee.png'
+import { navigate } from '../action/index'
 
 class Home extends React.Component {
+  smallS = () => {
+    this.props.dispatch(navigate('small'))
+  }
+
+  mediumS = () => {
+    this.props.dispatch(navigate('meduim'))
+  }
+
+  largeS = () => {
+    this.props.dispatch(navigate('largeS'))
+  }
+
   render () {
     return (
       <>
@@ -20,9 +34,9 @@ class Home extends React.Component {
               id officuim applamus. </p>
             <div className = 'size-title' ><h4>size*</h4></div>
             <div className= 'buttons-size'>
-              <a href ='#'>S</a>
-              <a href ='#'>M</a>
-              <a href ='#'>L</a>
+              <a href ='#' className='small-size' onClick={this.smallS}>S</a>
+              <a href ='#' className='meduim-size' onClick={this.mediumS}>M</a>
+              <a href ='#' className='large-size' onClick={this.largeS}>L</a>
             </div>
 
             <div className= 'add-to-cart'>
@@ -36,4 +50,10 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    size: state.size
+  }
+}
+
+export default connect(mapStateToProps)(Home)

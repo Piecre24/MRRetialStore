@@ -86,6 +86,33 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/action/index.js":
+/*!********************************!*\
+  !*** ./client/action/index.js ***!
+  \********************************/
+/*! exports provided: navigate, selectSize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return navigate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectSize", function() { return selectSize; });
+var navigate = function navigate(target) {
+  return {
+    type: 'NAVIGATE',
+    target: target // Open Cartlist
+
+  };
+};
+var selectSize = function selectSize(size) {
+  return {
+    type: 'SELECT_SIZE',
+    size: size
+  };
+};
+
+/***/ }),
+
 /***/ "./client/components/App.jsx":
 /*!***********************************!*\
   !*** ./client/components/App.jsx ***!
@@ -189,7 +216,9 @@ var header = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../server/public/image/classic-tee.png */ "./server/public/image/classic-tee.png");
+/* harmony import */ var _action_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../action/index */ "./client/action/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -212,6 +241,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -221,9 +254,29 @@ var Home = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Home);
 
   function Home() {
+    var _this;
+
     _classCallCheck(this, Home);
 
-    return _super.apply(this, arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "smallS", function () {
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('small'));
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "mediumS", function () {
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('meduim'));
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "largeS", function () {
+      _this.props.dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_3__["navigate"])('largeS'));
+    });
+
+    return _this;
   }
 
   _createClass(Home, [{
@@ -236,7 +289,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "whiteT-img"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+        src: _server_public_image_classic_tee_png__WEBPACK_IMPORTED_MODULE_2__["default"],
         alt: "img"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-description"
@@ -247,11 +300,17 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "size*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buttons-size"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
+        href: "#",
+        className: "small-size",
+        onClick: this.smallS
       }, "S"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
+        href: "#",
+        className: "meduim-size",
+        onClick: this.mediumS
       }, "M"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
+        href: "#",
+        className: "large-size",
+        onClick: this.largeS
       }, "L")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-to-cart"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -263,7 +322,13 @@ var Home = /*#__PURE__*/function (_React$Component) {
   return Home;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    size: state.size
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Home));
 
 /***/ }),
 
@@ -318,10 +383,13 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ "./client/reducers/navigation.js");
+/* harmony import */ var _selectsize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectsize */ "./client/reducers/selectsize.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  navigation: _navigation__WEBPACK_IMPORTED_MODULE_1__["default"]
+  navigation: _navigation__WEBPACK_IMPORTED_MODULE_1__["default"],
+  selectSize: _selectsize__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
@@ -353,6 +421,35 @@ var activePage = function activePage() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (activePage);
+
+/***/ }),
+
+/***/ "./client/reducers/selectsize.js":
+/*!***************************************!*\
+  !*** ./client/reducers/selectsize.js ***!
+  \***************************************/
+/*! exports provided: SELECT_SIZE, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_SIZE", function() { return SELECT_SIZE; });
+var SELECT_SIZE = 'SELECT SIZE'; // selecting the size of the t-shirt
+
+var selectedSize = function selectedSize() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'none';
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case SELECT_SIZE:
+      return action.target;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (selectedSize);
 
 /***/ }),
 
