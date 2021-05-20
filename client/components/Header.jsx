@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { navigate } from '../action/index'
 
+import CartList from './CartList'
 class header extends React.Component {
   opencart = () => {
     this.props.dispatch(navigate('cart'))
@@ -12,7 +13,9 @@ class header extends React.Component {
     return (
       <>
         <div className = 'header-class'>
-          <a href ='#' onClick={this.opencart} className = 'mycart'>My Cart</a>
+          <a href ='#' onClick={this.opencart} className = 'mycart'>My Cart
+            <CartList/>
+          </a>
         </div>
 
       </>

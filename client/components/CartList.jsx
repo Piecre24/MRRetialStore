@@ -3,13 +3,8 @@ import { connect } from 'react-redux'
 
 const cartlist = (props) => {
   return (
-    <div className='cart-list'>
-      <p className= 'add-cart'></p>
-      {/* {props.products.map(product => {
-        return (
-          hi
-        )
-      })} */}
+    <div className={props.cartCheck === 'noCart' ? 'cart-list' : 'cart-list-dropdown'}>
+      <p>HELLO WORLD!</p>
 
     </div>
   )
@@ -17,7 +12,7 @@ const cartlist = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products
+    cartCheck: state.activePage
   }
 }
 export default connect(mapStateToProps)(cartlist)

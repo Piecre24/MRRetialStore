@@ -4,26 +4,27 @@ export const ADD_TO_CART = 'ADD_TO_CART'
 const addToCart = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return getNewProduct(state, action.id)
+      return getNewProduct(state, action.product)
     default:
       return state
   }
 }
 
-function getNewProduct (product, id) {
+function getNewProduct (product, size) {
   let exists = false
   const newCart = product.map(item => {
-    if (item.id === id) {
-      item.id += 1
+    console.log(item)
+    if (item.size === size) {
+      // if size exist, adds another quantity
+      item.quantity += 1
       exists = true
     }
     return item
   })
-  console.log(product)
   if (exists) {
     return newCart
   } else {
-    newCart.push({ id: id, quantity: 1 })
+    newCart.push({ size: size, quantity: 1 })
     return newCart
   }
 }
