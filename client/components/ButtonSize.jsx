@@ -9,6 +9,7 @@ const ButtonSize = (props) => {
       <div className = 'size-title' >
         <h4>SIZE</h4>
         <h4 className ='required-star'>*</h4>
+        <span className = {props.size === 'error' ? 'show-error' : 'hide-error' } > please pick a size</span>
       </div>
       <div className= 'buttons-size'>
         <a href ='#' className={props.size === 'small' ? 'small-size-on' : 'small-size'} onClick={() => props.dispatchSize('small')}>S</a>
