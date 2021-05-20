@@ -94,6 +94,24 @@ h4.required-star {
     background-color: #222222;
     border-color: #222222;
   }
+
+ 
+/* cart list drop down */ 
+
+.cart-list{
+    display: none;
+}
+
+.cart-list-dropdown {
+    position: absolute;
+	left: 85%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+}
+ 
   
 /* for mobiles */
 
@@ -117,25 +135,9 @@ h4.required-star {
         font-size: 10px;
         display: inline-block;
       }
-}
-
-/* cart list drop down */ 
-
-.cart-list{
-    display: none;
-}
-/* 
-.mycart {
-    position: relative;
-  display: inline-block;
-} */
-
 .cart-list-dropdown {
-    position: fixed;
-	left: 85%;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    
+    position: absolute;
+        left: 62%;
+        
+    }    
 }
