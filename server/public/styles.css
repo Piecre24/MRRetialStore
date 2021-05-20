@@ -104,13 +104,23 @@ h4.required-star {
 
 .cart-list-dropdown {
     position: absolute;
-	left: 85%;
+	left: 75%;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
     
 }
+/* cart list content */
+.item {
+    position: relative;
+    display: block;
+}
+.WT-C img{
+    width: 30%;
+    height: auto;
+}
+
  
   
 /* for mobiles */
