@@ -675,7 +675,7 @@ function getNewProduct(product, size) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _activePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./activePage */ "./client/reducers/activePage.js");
-/* harmony import */ var _selectSize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectSize */ "./client/reducers/selectSize.js");
+/* harmony import */ var _selectsize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectsize */ "./client/reducers/selectsize.js");
 /* harmony import */ var _addToCart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addToCart */ "./client/reducers/addToCart.js");
 
 
@@ -683,15 +683,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   activePage: _activePage__WEBPACK_IMPORTED_MODULE_1__["default"],
-  selectSize: _selectSize__WEBPACK_IMPORTED_MODULE_2__["default"],
+  selectSize: _selectsize__WEBPACK_IMPORTED_MODULE_2__["default"],
   addToCart: _addToCart__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
 
 /***/ }),
 
-/***/ "./client/reducers/selectSize.js":
+/***/ "./client/reducers/selectsize.js":
 /*!***************************************!*\
-  !*** ./client/reducers/selectSize.js ***!
+  !*** ./client/reducers/selectsize.js ***!
   \***************************************/
 /*! exports provided: SELECT_SIZE, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
