@@ -146,7 +146,7 @@ var AddCartButton = function AddCartButton(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     onClick: function onClick() {
-      return props.dispatchSize(props.size);
+      return props.dispatchAdd(props.size);
     }
   }, "ADD TO CART")));
 };
@@ -154,7 +154,7 @@ var AddCartButton = function AddCartButton(props) {
 var dispatchToAddCart = function dispatchToAddCart(dispatch) {
   return {
     dispatchAdd: function dispatchAdd(size) {
-      return dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_2__["selectSize"])(size));
+      return dispatch(Object(_action_index__WEBPACK_IMPORTED_MODULE_2__["addToCart"])(size));
     }
   };
 };
@@ -508,6 +508,58 @@ var activePage = function activePage() {
 
 /***/ }),
 
+/***/ "./client/reducers/addToCart.js":
+/*!**************************************!*\
+  !*** ./client/reducers/addToCart.js ***!
+  \**************************************/
+/*! exports provided: ADD_TO_CART, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_TO_CART", function() { return ADD_TO_CART; });
+var ADD_TO_CART = 'ADD_TO_CART'; // selecting add to cart
+
+var addToCart = function addToCart() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case ADD_TO_CART:
+      return getNewProduct(state, action.id);
+
+    default:
+      return state;
+  }
+};
+
+function getNewProduct(product, id) {
+  var exists = false;
+  var newCart = product.map(function (item) {
+    if (item.id === id) {
+      item.id += 1;
+      exists = true;
+    }
+
+    return item;
+  });
+  console.log(product);
+
+  if (exists) {
+    return newCart;
+  } else {
+    newCart.push({
+      id: id,
+      quantity: 1
+    });
+    return newCart;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (addToCart);
+
+/***/ }),
+
 /***/ "./client/reducers/index.js":
 /*!**********************************!*\
   !*** ./client/reducers/index.js ***!
@@ -520,12 +572,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _activePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./activePage */ "./client/reducers/activePage.js");
 /* harmony import */ var _selectSize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectSize */ "./client/reducers/selectSize.js");
+/* harmony import */ var _addToCart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addToCart */ "./client/reducers/addToCart.js");
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   activePage: _activePage__WEBPACK_IMPORTED_MODULE_1__["default"],
-  selectSize: _selectSize__WEBPACK_IMPORTED_MODULE_2__["default"]
+  selectSize: _selectSize__WEBPACK_IMPORTED_MODULE_2__["default"],
+  addToCart: _addToCart__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
 
 /***/ }),

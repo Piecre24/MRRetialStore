@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { selectSize } from '../action/index'
+import { addToCart } from '../action/index'
 
 const AddCartButton = (props) => {
   return (
     <>
       <div className= 'add-to-cart'>
-        <a href ='#' onClick={() => props.dispatchSize(props.size)}>ADD TO CART</a>
+        <a href ='#' onClick={() => props.dispatchAdd(props.size)}>ADD TO CART</a>
       </div>
     </>
 
@@ -16,7 +16,7 @@ const AddCartButton = (props) => {
 
 const dispatchToAddCart = (dispatch) => {
   return {
-    dispatchAdd: (size) => dispatch(selectSize(size))
+    dispatchAdd: (size) => dispatch(addToCart(size))
   }
 }
 const mapStateToProps = (state) => {
