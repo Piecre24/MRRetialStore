@@ -131,11 +131,11 @@ h4.required-star {
 } */
 
 .cart-list-dropdown {
-    display: block;
-    position: absolute;
+    position: fixed;
+	left: 85%;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    
 }
