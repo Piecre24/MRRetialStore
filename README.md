@@ -8,9 +8,9 @@ To be able to deliver a profesional prototype of a web application
 # Things to do
 - Install write package [x]
 - Make a dev branch [x]
-- Heroku Cloud deployment []
+- Heroku Cloud deployment [x]
 - Added transitions to add button [x]
-- Clicking Add to cart with selected     size shows error message []
+- Clicking Add to cart with selected size shows error message []
 - Construct prototype webpage visible [x]
 - Have the right colour scheme [x]
 - Responsive App [x]
