@@ -1,15 +1,32 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
+import { navigate } from '../action/index'
+
+import CartList from './CartList'
 class header extends React.Component {
+  opencart = () => {
+    this.props.dispatch(navigate('cart'))
+  }
+
   render () {
     return (
       <>
-
-        <h1>This is header</h1>
+        <div className = 'header-class'>
+          <a href ='#' onClick={this.opencart} className = 'mycart'>My Cart
+            <CartList/>
+          </a>
+        </div>
 
       </>
     )
   }
 }
 
-export default header
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(header)

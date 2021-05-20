@@ -9,19 +9,21 @@ To be able to deliver a profesional prototype of a web application
 - Install write package [x]
 - Make a dev branch [x]
 - Heroku Cloud deployment []
-- Construct prototype webpage visible []
-- Have the right colour scheme []
-- Responsive App []
-- Redux functionality []
-- Size button []
-- Add Cart button []
-- My Cart list []
-- Add Cart functionality (stretch) []
+- Added transitions to add button [x]
+- Clicking Add to cart with selected     size shows error message []
+- Construct prototype webpage visible [x]
+- Have the right colour scheme [x]
+- Responsive App [x]
+- Redux functionality [x]
+- Size button [x]
+- Add Cart button [x]
+- My Cart list [x]
+- Add Cart functionality (stretch) [x]
 - Thunk functionality (stretch) []
 - AWS Cloud deployment (stretch) []
 
 ## Expectation settings
-Starting work at 10pm to 3am in total of 5 hours max.
+Starting work at 10pm to 3am in total of 5 hours max. Note allowed to extend.
 
 ## Stress Management 
 Take frequent breaks every hour (mimimum of 10mins). 

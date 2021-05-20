@@ -8,7 +8,7 @@ import { HashRouter as Router } from 'react-router-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 
 import App from './components/App'
-import reducers from './reducers/index'
+import reducers from './reducers'
 
 // Redux stuffs
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux'
 
-import navigation from './navigation'
+import activePage from './activePage'
+import selectSize from './selectSize'
+import addToCart from './addToCart'
 
 export default combineReducers({
-  navigation
+  activePage,
+  selectSize,
+  addToCart
 })

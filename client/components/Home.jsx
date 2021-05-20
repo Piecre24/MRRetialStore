@@ -1,4 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import ButtonSize from './ButtonSize'
+import AddCartButton from './AddCartButton'
+
+import whitetee from '../../server/public/image/classic-tee.png'
 
 class Home extends React.Component {
   render () {
@@ -17,4 +23,10 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    size: state.selectSize
+  }
+}
+
+export default connect(mapStateToProps)(Home)
