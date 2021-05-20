@@ -101,7 +101,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToCart", function() { return addToCart; });
 var SELECT_SIZE = 'SELECT_SIZE';
 var navigate = function navigate(target) {
-  console.log('clicked');
   return {
     type: 'NAVIGATE',
     target: target // Open Cartlist
@@ -531,12 +530,32 @@ var activePage = function activePage() {
 
   switch (action.type) {
     case NAVIGATE:
-      return action.target;
+      return cartStatus(action.target);
 
     default:
       return state;
   }
-};
+}; // function that sees if its cart is visible
+
+
+function cartStatus(status) {
+  var on = false; // need to debug
+
+  if (initial !== status) {
+    initial = 'cart';
+    on = true;
+  } else {
+    initial = 'noCart';
+    on = false;
+  }
+
+  if (on) {
+    return status;
+  } else {
+    status = 'noCart';
+    return status;
+  }
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (activePage);
 
@@ -570,8 +589,6 @@ var addToCart = function addToCart() {
 function getNewProduct(product, size) {
   var exists = false;
   var newCart = product.map(function (item) {
-    console.log(item);
-
     if (item.size === size) {
       // if size exist, adds another quantity
       item.quantity += 1;

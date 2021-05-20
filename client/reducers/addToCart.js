@@ -13,7 +13,6 @@ const addToCart = (state = [], action) => {
 function getNewProduct (product, size) {
   let exists = false
   const newCart = product.map(item => {
-    console.log(item)
     if (item.size === size) {
       // if size exist, adds another quantity
       item.quantity += 1

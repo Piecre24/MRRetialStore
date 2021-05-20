@@ -1,7 +1,6 @@
 export const SELECT_SIZE = 'SELECT_SIZE'
 
 export const navigate = target => {
-  console.log('clicked')
   return {
     type: 'NAVIGATE',
     target// Open Cartlist
