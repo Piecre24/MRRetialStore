@@ -135,9 +135,14 @@ h4.required-star {
     .app {
         font-size:80%;
     }
+    
+    .header-class a {
+     padding-left: 80%;   
+    }
+
     .whiteT-img img {width: 100%; margin:auto}
     .product-content {
-        padding-top: 40px;
+        padding-top: 30px;
         padding-right: 10%;
         padding-left: 2%;
         display: block;
