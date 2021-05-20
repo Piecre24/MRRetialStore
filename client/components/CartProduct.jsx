@@ -1,13 +1,13 @@
 import React from 'react'
 
 const CartProduct = (props) => {
-//   const { size, quantity } = props.item
-  console.log(props.item)
+  const item = props.product
   return (
     <div className='item'>
       <p className='item-name'>Classic Tee</p>
-      {/* <p className='item quantity'>{quantity}</p>
-      <p>{size}</p> */}
+      <p>{item.size}</p>
+      <p className='item quantity'>{item.quantity}</p>
+
     </div>
 
   )

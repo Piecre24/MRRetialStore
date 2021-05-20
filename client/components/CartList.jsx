@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { addToCart } from '../action'
-
 import CartProduct from './CartProduct'
 
 const cartlist = (props) => {
@@ -10,7 +8,8 @@ const cartlist = (props) => {
     <div className={props.cartCheck === 'noCart' ? 'cart-list' : 'cart-list-dropdown'}>
       {props.item.map(product => {
         return (
-          <CartProduct key={product.size} product={product} addToCart={props.addToCart}/>
+          // product={product} brings the state towards CartProduct
+          <CartProduct key={product.size} product={product}/>
         )
       })}
     </div>
@@ -24,11 +23,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addToCart: (size) => {
-      dispatch(addToCart(size))
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(cartlist)
+export default connect(mapStateToProps)(cartlist)
