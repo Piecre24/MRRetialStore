@@ -6,9 +6,11 @@ const CartProduct = (props) => {
   return (
     <div className='item'>
       <div className = 'WT-C'><img src={whitetee} alt="img" /></div>
-      <p className='item-name'>Classic Tee</p>
-      <p className='item-sizee'>{item.size}</p>
-      <p className='item quantity'>{item.quantity}x</p>
+      <div className = 'item-description'>
+        <p className='item-name'>Classic Tee</p>
+        <div className='item-quantity'><span>{item.quantity}x <h3>$75</h3></span></div>
+        <p className='item-sizee'>Size: {item.size}</p>
+      </div>
 
     </div>
 

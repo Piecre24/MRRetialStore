@@ -113,12 +113,17 @@ h4.required-star {
 }
 /* cart list content */
 .item {
-    position: relative;
     display: block;
 }
 .WT-C img{
     width: 30%;
     height: auto;
+}
+.item-description{
+    display: block;
+}
+.item-quantity span, .item-quantity h3{
+    display:inline;
 }
 
  
